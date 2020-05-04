@@ -1,0 +1,6 @@
+parameter_defaults:
+  NeutronDebug: False
+  NovaDebug: False
+  CinderDebug: False
+  ConfigDebug: False
+  Debug: True

@@ -1,0 +1,21 @@
+#resource_registry:
+# OS::TripleO::NodeUserData: /home/stack/templates/wipe-disks.yaml
+parameter_defaults:
+  CephPoolDefaultSize: 3
+  #CephPoolDefaultPgNum: 128
+  CephAnsiblePlaybookVerbosity: 1
+  CephAnsibleEnvironmentVariables:
+    ANSIBLE_SSH_RETRIES: '6'
+  CephAnsibleDiskConfig:
+    devices:
+      - /dev/vdb
+  CephConfigOverrides:
+    mon_clock_drift_allowed: 0.5
+    mon_max_pg_per_osd: 1024
+    osd_pool_default_min_size: 1
+    mon_pg_warn_min_per_osd: 0
+    mon_pg_warn_max_per_osd: 0
+    mon_pg_warn_max_object_skew: 0
+ # mon_osd_allow_primary_affinity: 1
+  CephEnableDashboard: True
+  CephDashboardAdminPassword: redhat

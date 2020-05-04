@@ -1,0 +1,7 @@
+parameter_defaults:
+  CloudDomain: lab.local
+  CloudName: overcloud.lab.local
+  TimeZone: 'Europe/Amsterdam'
+  #NeutronEnableDVR: true
+  ComputeExtraConfig:
+    nova::compute::reserved_host_memory: 512

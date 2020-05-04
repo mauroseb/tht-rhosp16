@@ -1,0 +1,2 @@
+parameter_defaults:
+  NeutronDhcpAgentDnsmasqDnsServers: ['192.168.122.1','192.168.2.254']

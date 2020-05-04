@@ -1,0 +1,20 @@
+parameter_defaults:
+  ControllerSchedulerHints:
+    'capabilities:node': 'ice-ctl-0%index%'
+  ComputeSchedulerHints:
+    'capabilities:node': 'ice-com-0%index%'
+  CephStorageSchedulerHints:
+    'capabilities:node': 'ice-ceph-0%index%'
+  HostnameMap:
+    overcloud-controller-0: ice-ctl-01
+    overcloud-controller-1: ice-ctl-02
+    overcloud-controller-2: ice-ctl-03
+    overcloud-novacompute-0: ice-com-01
+    overcloud-novacompute-1: ice-com-02
+    overcloud-novacompute-2: ice-com-03
+    overcloud-novacompute-3: ice-com-04
+    overcloud-novacompute-4: ice-com-05
+    overcloud-novacompute-5: ice-com-06
+    overcloud-cephstorage-0: ice-ceph-01
+    overcloud-cephstorage-1: ice-ceph-02
+    overcloud-cephstorage-2: ice-ceph-03
