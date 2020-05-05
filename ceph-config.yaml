@@ -9,7 +9,7 @@ parameter_defaults:
   CephAnsibleDiskConfig:
     devices:
       - /dev/vdb
-  
+      - /dev/vdc
   CephConfigOverrides:
     mon_clock_drift_allowed: 0.5
     mon_max_pg_per_osd: 1024
