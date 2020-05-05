@@ -22,6 +22,5 @@ parameter_defaults:
     osd_recovery_op_priority: 1
     osd_recovery_max_active: 1
     osd_max_backfills: 1
-
   CephEnableDashboard: True
   CephDashboardAdminPassword: redhat
