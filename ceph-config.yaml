@@ -9,6 +9,7 @@ parameter_defaults:
   CephAnsibleDiskConfig:
     devices:
       - /dev/vdb
+  
   CephConfigOverrides:
     mon_clock_drift_allowed: 0.5
     mon_max_pg_per_osd: 1024
@@ -16,6 +17,9 @@ parameter_defaults:
     mon_pg_warn_min_per_osd: 0
     mon_pg_warn_max_per_osd: 0
     mon_pg_warn_max_object_skew: 0
- # mon_osd_allow_primary_affinity: 1
+    osd_recovery_op_priority: 1
+    osd_recovery_max_active: 1
+    osd_max_backfills: 1
+    #mon_osd_allow_primary_affinity: 1
   CephEnableDashboard: True
   CephDashboardAdminPassword: redhat
