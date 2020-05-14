@@ -22,30 +22,30 @@ rm last.log
 ln -s $LOG last.log
 
 echodo time openstack overcloud deploy \
---timeout 1200 \
---config-download-timeout 1200 \
+--timeout 480 \
+--config-download-timeout 480 \
 --verbose \
 --libvirt-type kvm \
 --ntp-server 192.168.3.254 \
 --validation-errors-nonfatal \
 --disable-validations \
 --templates \
--r ${THT}/roles_data.yaml \
--n ${THT}/network_data.yaml \
+-e ${THT}/node-info.yaml \
+-e ${THT}/local-registry.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/network-environment.yaml \
+-e ${THT}/network-environment.yaml \
+-n ${THT}/network_data.yaml \
+-e ${THT}/dnsmasq-dns.yaml \
+-e ${THT}/predictable-ips.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/ceph-ansible/ceph-ansible.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/ceph-ansible/ceph-mds.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/ceph-ansible/ceph-rgw.yaml \
 -e /usr/share/openstack-tripleo-heat-templates/environments/cinder-backup.yaml \
--e ${THT}/network-environment.yaml \
--e ${THT}/common.yaml \
--e ${THT}/node-info.yaml \
--e ${THT}/local-registry.yaml \
--e ${THT}/dnsmasq-dns.yaml \
 -e ${THT}/ceph-config.yaml \
--e ${THT}/predictable-ips.yaml \
+-e ${THT}/common.yaml \
 -e ${THT}/hostnames.yaml \
+-r ${THT}/roles_data.yaml \
 --log-file $LOG | tee -a $OUTPUT
 
 # -e ${THT}/rhsm.yaml \

@@ -1,6 +1,6 @@
 parameter_defaults:
   CephPoolDefaultSize: 3
-  #CephPoolDefaultPgNum: 128
+  CephPoolDefaultPgNum: 64
   CephAnsiblePlaybookVerbosity: 1
   CephAnsibleEnvironmentVariables:
     ANSIBLE_SSH_RETRIES: '6'
@@ -23,7 +23,10 @@ parameter_defaults:
     osd_recovery_max_active: 1
     osd_max_backfills: 1
     #journal_size: 40960
+    # Avoid timeout of podman pulling rhceph image from undercloud
+    docker_pull_timeout: "600s"
   #CephStorageImage: overcloud-minimal
 # Dashboard does not work yet
 # CephEnableDashboard: True
 #  CephDashboardAdminPassword: redhat
+# 
