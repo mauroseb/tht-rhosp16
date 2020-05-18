@@ -26,7 +26,7 @@ parameter_defaults:
     # Avoid timeout of podman pulling rhceph image from undercloud
     docker_pull_timeout: "600s"
   #CephStorageImage: overcloud-minimal
-# Dashboard does not work yet
-# CephEnableDashboard: True
-#  CephDashboardAdminPassword: redhat
-# 
+  # Dashboard does not work yet
+  #CephEnableDashboard: True
+  #CephDashboardAdminPassword: redhat
+
