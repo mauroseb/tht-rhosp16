@@ -18,6 +18,8 @@ parameter_defaults:
     mon_pg_warn_max_object_skew: 0
     mon_max_pg_per_osd: 1024
     #mon_osd_allow_primary_affinity: 1
+    # This should have been false by default
+    rgw_enable_usage_log: false
   CephAnsibleExtraConfig:
     osd_recovery_op_priority: 1
     osd_recovery_max_active: 1
