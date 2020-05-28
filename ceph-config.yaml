@@ -1,7 +1,8 @@
 parameter_defaults:
   CephPoolDefaultSize: 3
   CephPoolDefaultPgNum: 64
-  CephAnsiblePlaybookVerbosity: 1
+  # python bug
+  CephAnsiblePlaybookVerbosity: 0
   CephAnsibleEnvironmentVariables:
     ANSIBLE_SSH_RETRIES: '6'
   CephAnsibleDiskConfig:

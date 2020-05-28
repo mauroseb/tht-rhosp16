@@ -2,7 +2,6 @@ parameter_defaults:
   CloudDomain: lab.local
   CloudName: overcloud.lab.local
   TimeZone: 'Europe/Amsterdam'
-  #NeutronEnableDVR: true
   NodeRootPassword: 'redhat'
   ComputeExtraConfig:
     nova::compute::reserved_host_memory: 1024
