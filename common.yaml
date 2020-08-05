@@ -3,6 +3,7 @@ parameter_defaults:
   CloudName: overcloud.lab.local
   TimeZone: 'Europe/Amsterdam'
   NodeRootPassword: 'redhat'
+  AdminEmail: mauro@lab.local
   ComputeExtraConfig:
     nova::compute::reserved_host_memory: 1024
   BannerText: |
