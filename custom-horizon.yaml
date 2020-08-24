@@ -1,0 +1,5 @@
+parameters_defaults:
+  ContainerHorizonConfigImage: 172.16.0.2:8787/rhosp-rhel8/openstack-horizon-mod:0-1
+  ContainerHorizonImage: 172.16.0.2:8787/rhosp-rhel8/openstack-horizon-mod:0-1
+  ExtraConfig:
+    horizon::help_url: "http://ice-lab.org"
