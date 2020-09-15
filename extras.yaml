@@ -3,7 +3,8 @@ parameter_defaults:
     # Tripling all HAproxy timeouts for my slow test environment
     tripleo::haproxy::haproxy_default_timeout: [ 'http-request 30s', 'queue 6m', 'connect 30s', 'client 6m', 'server 6m', 'check 30s' ]
     # Also token expiration
-    keystone::token_expiration: 9000
+    # keystone::token_expiration: 86400
+    TokenExpiration: 86400
     # And mysql
     tripleo::profile::base::database::mysql::mysql_server_options:
       mysqld:
