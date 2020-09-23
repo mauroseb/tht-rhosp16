@@ -1,3 +1,6 @@
+resource_registry:
+  OS::TripleO::NodeUserData: /usr/share/openstack-tripleo-heat-templates/firstboot/userdata_root_password.yaml
+
 parameter_defaults:
   CloudDomain: lab.local
   CloudName: overcloud.lab.local
