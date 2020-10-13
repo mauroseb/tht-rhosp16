@@ -9,6 +9,7 @@ RHOSP16 TripleO Heat Templates
  - +Predictable Hostnames
  - +Glance NFS Backend
  - +Security
+ - +STF
  - Alternatively +External Ceph
  - Alternatively +Custom Horizon Image
 
