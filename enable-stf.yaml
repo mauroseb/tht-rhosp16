@@ -1,0 +1,10 @@
+parameter_defaults:
+  EnableSTF: true
+  CollectdAmqpInterval: 10
+  CollectdDefaultPollingInterval: 10
+  MetricsQdrConnectors:
+    - host: qdr-normal-sa-telemetry.apps.ocp4-bm.t1.lab.local
+      port: 443
+      role: edge
+      sslProfile: sslProfile
+      verifyHostname: false
