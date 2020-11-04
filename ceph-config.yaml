@@ -31,4 +31,9 @@ parameter_defaults:
   # Dashboard does not work yet
   #CephEnableDashboard: True
   #CephDashboardAdminPassword: redhat
+  # Enable automated image conversion of qcow2 images to raw if RBD is glance backend
+  GlanceImageImportPlugins: ['image_conversion']
+    
+
+
 
