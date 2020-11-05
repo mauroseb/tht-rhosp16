@@ -3,6 +3,12 @@ parameter_defaults:
   CollectdConnectionType: 'network'
   CollectdServer: '192.168.3.80'
   
+  # Forbid attaching cinder volumes from foreing AZs
+  NovaCrossAZAttach: false
+  # Nova Host memory
+  NovaReservedHostMemory: 1024
+  
+  # Tunings
   ControllerExtraConfig:
     # Tripling all HAproxy timeouts for my slow test environment
     tripleo::haproxy::haproxy_default_timeout: [ 'http-request 30s', 'queue 6m', 'connect 30s', 'client 6m', 'server 6m', 'check 30s' ]
