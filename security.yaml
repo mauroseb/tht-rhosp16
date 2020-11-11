@@ -12,6 +12,9 @@ parameter_defaults:
   PasswordMinLen: 5
   PasswordWarnAge: 7
   FailDelay: 4
+  HorizonPasswordValidator: '^.{6,18}$'
+  HorizonPasswordValidatorHelp: 'Password must be between 6 and 18 characters.'
+  KeystoneNotificationFormat: cadf
   ControllerExtraConfig:
     horizon::disable_password_reveal: false
   
