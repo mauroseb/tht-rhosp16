@@ -25,4 +25,7 @@ parameter_defaults:
               * evidence of criminal activity, system personnel may provide    *
               * the evidence from such monitoring to law enforcement officials.*
               ******************************************************************
+  MessageOfTheDay: |
+    OSP LAB environment
+
 
