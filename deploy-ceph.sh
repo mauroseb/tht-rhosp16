@@ -57,9 +57,12 @@ echodo time openstack overcloud deploy \
 -e ${THT}/predictable-ips.yaml \
 -e ${THT}/common.yaml \
 -e ${THT}/hostnames.yaml \
--e ${THT}/bz1743330.yaml \
+-e ${THT}/barbican.yaml \
 -e ${THT}/rhsm.yaml \
+-e ${THT}/extras.yaml \
+-e ${THT}/security.yaml \
 --log-file $LOG | tee -a $OUTPUT
 
-
-
+# -e ${THT}/bz1743330.yaml \
+# -e ${THT}/glance-nfs.yaml \
+# -e ${THT}/custom-horizon.yaml \
