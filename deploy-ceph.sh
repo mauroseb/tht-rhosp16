@@ -1,4 +1,5 @@
-#!/bin/bash                                         
+#!/bin/bash
+# OSP Deployment script with internal Ceph
 
 export THT=/home/stack/templates
 export LOG=logs/deploy_$(date +%F_%s).log
