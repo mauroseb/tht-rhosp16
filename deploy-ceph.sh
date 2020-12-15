@@ -53,14 +53,15 @@ echodo time openstack overcloud deploy \
 -e /usr/share/openstack-tripleo-heat-templates/environments/cinder-backup.yaml \
 -e ${THT}/network-environment.yaml \
 -n ${THT}/network_data.yaml \
--e ${THT}/ceph-config.yaml \
--e ${THT}/dnsmasq-dns.yaml \
--e ${THT}/predictable-ips.yaml \
--e ${THT}/common.yaml \
--e ${THT}/hostnames.yaml \
 -e ${THT}/barbican.yaml \
--e ${THT}/rhsm.yaml \
+-e ${THT}/ceph-config.yaml \
+-e ${THT}/common.yaml \
+-e ${THT}/dnsmasq-dns.yaml \
 -e ${THT}/extras.yaml \
+-e ${THT}/fencing.yaml \
+-e ${THT}/hostnames.yaml \
+-e ${THT}/predictable-ips.yaml \
+-e ${THT}/rhsm.yaml \
 -e ${THT}/security.yaml \
 --log-file $LOG | tee -a $OUTPUT
 
