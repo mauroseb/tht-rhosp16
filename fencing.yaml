@@ -1,0 +1,42 @@
+parameter_defaults:
+  EnableFencing: true
+  FencingConfig: {
+  "devices": [
+    {    "agent": "fence_ipmilan",
+         "host_mac": "52:54:00:6e:1d:57",
+         "params": {
+           "auth": "password",
+           "ipaddr": "192.168.122.1",
+           "ipport": "6500",
+           "lanplus": "1",
+           "login": "admin",
+           "passwd": "redhat",
+           "pcmk_host_list": "ice-ctl-01"
+         }
+    },
+    {    "agent": "fence_ipmilan",
+         "host_mac": "52:54:00:6e:1d:57",
+         "params": {
+           "auth": "password",
+           "ipaddr": "192.168.122.1",
+           "ipport": "6501",
+           "lanplus": "1",
+           "login": "admin",
+           "passwd": "redhat",
+           "pcmk_host_list": "ice-ctl-02"
+         }
+    },
+    {    "agent": "fence_ipmilan",
+         "host_mac": "52:54:00:6e:1d:57",
+         "params": {
+           "auth": "password",
+           "ipaddr": "192.168.122.1",
+           "ipport": "6502",
+           "lanplus": "1",
+           "login": "admin",
+           "passwd": "redhat",
+           "pcmk_host_list": "ice-ctl-03"
+         }
+    }
+  ]
+  }
