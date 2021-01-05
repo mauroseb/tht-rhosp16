@@ -24,6 +24,10 @@ parameter_defaults:
     osd_recovery_op_priority: 1
     osd_recovery_max_active: 1
     osd_max_backfills: 1
+    health_osd_check_delay: 40
+    health_osd_check_retries: 30
+    health_mon_check_retries: 10
+    health_mon_check_delay: 20
     #journal_size: 40960
     # Avoid timeout of podman pulling rhceph image from undercloud
     docker_pull_timeout: "600s"
