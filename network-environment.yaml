@@ -1,33 +1,12 @@
-#This file is an example of an environment file for defining the isolated
-#networks and related parameters.
 resource_registry:
-  # Network Interface templates to use (these files must exist). You can
-  # override these by including one of the net-*.yaml environment files,
-  # such as net-bond-with-vlans.yaml, or modifying the list here.
-  # Port assignments for the Controller
   OS::TripleO::Controller::Net::SoftwareConfig:
     ./nic-config/controller.yaml
-  # Port assignments for the Compute
   OS::TripleO::Compute::Net::SoftwareConfig:
     ./nic-config/compute.yaml
-  # Port assignments for the CephStorage
   OS::TripleO::CephStorage::Net::SoftwareConfig:
     ./nic-config/ceph-storage.yaml
 
 parameter_defaults:
-  # This section is where deployment-specific configuration is done
-  #
-  # NOTE: (Since Rocky)
-  # ControlPlaneSubnetCidr: It is no longer a requirement to provide the
-  #                         parameter. The attribute is resolved from the
-  #                         ctlplane subnet(s).
-  # ControlPlaneDefaultRoute: It is no longer a requirement to provide this
-  #                           parameter. The attribute is resolved from the
-  #                           ctlplane subnet(s).
-  # EC2MetadataIp: It is no longer a requirement to provide this parameter. The
-  #                attribute is resolved from the ctlplane subnet(s).
-  #
-
   # Customize the IP subnet to match the local environment
   StorageNetCidr: '172.16.1.0/24'
   # Customize the IP range to use for static IPs and VIPs
@@ -87,4 +66,7 @@ parameter_defaults:
   # for Linux bonds w/LACP, or "bond_mode=active-backup" for OVS active/backup.
   BondInterfaceOvsOptions: "bond_mode=active-backup"
 
+  # Enable isolated metadata agent
+  #NeutronEnableIsolatedMetadata: 'True'
+  # Disable DVR
   NeutronEnableDVR: false
