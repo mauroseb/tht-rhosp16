@@ -28,6 +28,8 @@ parameter_defaults:
     health_osd_check_retries: 30
     health_mon_check_retries: 10
     health_mon_check_delay: 20
+    ceph_osd_docker_cpu_limit: 1
+    ceph_osd_docker_memory_limit: 3g
     #journal_size: 40960
     # Avoid timeout of podman pulling rhceph image from undercloud
     docker_pull_timeout: "600s"
