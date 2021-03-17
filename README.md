@@ -10,6 +10,7 @@ Features:
  - +Predictable IPs
  - +Predictable Hostnames
  - +Glance NFS Backend
+ - +Glance Image Conversion
  - +Security
  - +STF
  - Alternatively +External Ceph
