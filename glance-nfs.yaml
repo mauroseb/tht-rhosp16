@@ -1,3 +1,5 @@
 parameter_defaults:
   GlanceNfsEnabled: true
   GlanceNfsShare: 192.168.3.80:/glance/
+  GlanceImageImportPlugins: ['image_conversion']
+  GlanceImageConversionOutputFormat: 'raw'
