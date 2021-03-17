@@ -2,4 +2,4 @@ parameter_defaults:
   CephClusterFSID: 6454b2b8-2cb4-495f-942c-1f1767b222ff
   CephClientUserName: openstack
   CephClientKey: AQCcgLhekv8HJBAAvJWhOutKdDzfaS9ZxUuqUQ==
-  CephExternalMonitor: '192.168.122.11, 192.168.122.12, 192.168.122.12'
+  CephExternalMonitor: '192.168.122.11, 192.168.122.12, 192.168.122.13'
