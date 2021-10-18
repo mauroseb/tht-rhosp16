@@ -1,3 +1,4 @@
 parameter_defaults:
   OctaviaTimeoutClientData: 1200000
   OctaviaTimeoutMemberData: 1200000
+  OctaviaLoadBalancerTopology: "ACTIVE_STANDBY"
